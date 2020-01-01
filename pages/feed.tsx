@@ -1,24 +1,15 @@
 import React from "react";
-import HelloWorld from "../components/hello/HelloWorld";
 import { gql } from "apollo-boost";
 import { useQuery } from "@apollo/react-hooks";
+import PostList from "../components/postList";
 
 const CATEGORYLIST = gql`
-  query categoryList($id: Int!) {
-    category(id: $id) {
+  {
+    posts {
       id
-      children_count
-      children {
-        id
-        path
-        name
-        image
-        url_key
-        url_path
-        position
-        children_count
-        include_in_menu
-      }
+      title
+      content
+      published
     }
   }
 `;
@@ -33,7 +24,7 @@ const Hello = () => {
   console.log(data);
   return (
     <>
-      <HelloWorld />
+      <PostList />
     </>
   );
 };
