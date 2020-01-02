@@ -19,7 +19,9 @@ class MyApp extends App {
       <>
         <ApolloProvider client={apollo}>
           <Header />
-          <Component {...pageProps} />
+          <div>
+            <Component {...pageProps} />
+          </div>
         </ApolloProvider>
       </>
     );
