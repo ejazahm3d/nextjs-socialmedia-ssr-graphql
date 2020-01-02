@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Row, Col, Icon, Typography } from "antd";
+import { Row, Col } from "antd";
 
-import Search from "antd/lib/input/Search";
 import CartIcons from "./CartIcons";
 import Logo from "./Logo";
+import SearchBar from "./SearchBar";
 
 const Topbar: React.FC = () => {
   const [logoClicked, setLogoClicked] = useState(false);
@@ -15,11 +15,7 @@ const Topbar: React.FC = () => {
           <Logo logoClicked={logoClicked} setLogoClicked={setLogoClicked} />
         </Col>
         <Col offset={4} span={5}>
-          <Search
-            placeholder="input search text"
-            onSearch={value => console.log(value)}
-            size="large"
-          />
+          <SearchBar />
         </Col>
         <Col offset={4} span={5}>
           <CartIcons />

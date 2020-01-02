@@ -8,13 +8,15 @@ interface Props {
 
 const Logo: React.FC<Props> = ({ logoClicked, setLogoClicked }) => {
   return (
-    <Icon
-      type="down-circle"
-      spin={logoClicked}
-      onClick={() => setLogoClicked(!logoClicked)}
-      title="Bathroom Tiles"
-      style={{ fontSize: 60, textAlign: "start" }}
-    />
+    <>
+      <Icon
+        type="down-circle"
+        spin={logoClicked}
+        onClick={() => setLogoClicked(!logoClicked)}
+        title="Bathroom Tiles"
+        style={{ fontSize: 60, textAlign: "start" }}
+      />
+    </>
   );
 };
 

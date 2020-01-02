@@ -3,7 +3,7 @@ import { Row, Col, Icon, Typography } from "antd";
 
 const CartIcons = () => {
   return (
-    <div>
+    <>
       <Row>
         <Col span={6}>
           <Icon type="heart" style={{ fontSize: 23 }} />
@@ -24,7 +24,7 @@ const CartIcons = () => {
           <Typography.Paragraph>Basket</Typography.Paragraph>
         </Col>
       </Row>
-    </div>
+    </>
   );
 };
 
