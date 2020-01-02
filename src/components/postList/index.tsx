@@ -5,6 +5,9 @@ import { useQuery } from "@apollo/react-hooks";
 import { gql } from "apollo-boost";
 import { Row } from "antd";
 import "./post.styles.less";
+import { Typography } from "antd";
+
+const { Title } = Typography;
 
 const GET_POSTS = gql`
   query getPosts {
@@ -26,7 +29,13 @@ const PostList: React.FC = () => {
     return (
       <>
         <div className="post">
-          <Row gutter={16}>
+          <Typography.Title
+            level={2}
+            style={{ textAlign: "center", marginBottom: 30 }}
+          >
+            News Feed
+          </Typography.Title>
+          <Row gutter={16} style={{ marginRight: "10%", marginLeft: "10%" }}>
             {data?.posts?.map(post => (
               <Post key={post.id} post={post} />
             ))}

@@ -1,5 +1,4 @@
 import React from "react";
-import "./hello.module.less";
 import { Col, Card } from "antd";
 
 interface Props {

@@ -7,7 +7,7 @@ const NavBar: React.FC = () => {
   return (
     <header>
       <nav>
-        <Menu theme="dark" mode="horizontal">
+        <Menu theme="light" mode="horizontal" style={{ textAlign: "center" }}>
           <Menu.Item key="2" onClick={() => router.push("/")}>
             Home
           </Menu.Item>
