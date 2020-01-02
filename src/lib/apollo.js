@@ -1,6 +1,6 @@
 import withApollo from "next-with-apollo";
 import ApolloClient, { InMemoryCache } from "apollo-boost";
-import { graphqlUri as GRAPHQL_URL } from "../env";
+import { graphqlUri as GRAPHQL_URL } from "../../env";
 import { parseCookies } from "nookies";
 
 export default withApollo(
