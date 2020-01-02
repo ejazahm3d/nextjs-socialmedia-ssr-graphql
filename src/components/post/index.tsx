@@ -15,7 +15,15 @@ interface Props {
 
 const Post: React.FC<Props> = ({ post }) => {
   return (
-    <Col span={8} className="post__row__col">
+    <Col
+      span={8}
+      xs={24}
+      md={12}
+      lg={8}
+      xl={6}
+      sm={12}
+      className="post__row__col"
+    >
       <Card title={post.title} bordered={false}>
         {post.content}
       </Card>

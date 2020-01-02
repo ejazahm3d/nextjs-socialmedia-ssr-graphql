@@ -26,7 +26,7 @@ const PostList: React.FC = () => {
     return (
       <>
         <div className="post">
-          <Row gutter={16} align="stretch">
+          <Row gutter={16}>
             {data?.posts?.map(post => (
               <Post key={post.id} post={post} />
             ))}
