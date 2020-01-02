@@ -2,6 +2,7 @@ import React from "react";
 import App from "next/app";
 import withApollo from "../src/lib/apollo";
 import { ApolloProvider } from "@apollo/react-hooks";
+import Header from "../src/components/layout/header";
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -17,6 +18,7 @@ class MyApp extends App {
     return (
       <>
         <ApolloProvider client={apollo}>
+          <Header />
           <Component {...pageProps} />
         </ApolloProvider>
       </>

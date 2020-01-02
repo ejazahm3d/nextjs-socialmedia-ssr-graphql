@@ -7,6 +7,7 @@ import {
   Slider,
   Button
 } from "antd";
+import Header from "../src/components/layout/header";
 
 const FormItem = Form.Item;
 const Option = Select.Option;
