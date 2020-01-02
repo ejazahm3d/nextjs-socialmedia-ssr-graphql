@@ -1,7 +1,6 @@
 import React from "react";
 import "./hello.module.less";
-import { Row, Col, Button, message } from "antd";
-import { GetPostsProps, Post as PostProp } from "../../generated/graphql";
+import { Col, Card } from "antd";
 
 interface Props {
   post: {
@@ -15,7 +14,13 @@ interface Props {
 }
 
 const Post: React.FC<Props> = ({ post }) => {
-  return <div>{post.title}</div>;
+  return (
+    <Col span={8} className="post__row__col">
+      <Card title={post.title} bordered={false}>
+        {post.content}
+      </Card>
+    </Col>
+  );
 };
 
 export default Post;

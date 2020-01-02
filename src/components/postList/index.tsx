@@ -3,6 +3,8 @@ import Post from "../post";
 import { GetPostsQuery } from "../../generated/graphql";
 import { useQuery } from "@apollo/react-hooks";
 import { gql } from "apollo-boost";
+import { Row } from "antd";
+import "./post.styles.less";
 
 const GET_POSTS = gql`
   query getPosts {
@@ -22,11 +24,15 @@ const PostList: React.FC = () => {
 
   if (data) {
     return (
-      <div>
-        {data?.posts?.map(post => (
-          <Post key={post.id} post={post} />
-        ))}
-      </div>
+      <>
+        <div className="post">
+          <Row gutter={16} align="stretch">
+            {data?.posts?.map(post => (
+              <Post key={post.id} post={post} />
+            ))}
+          </Row>
+        </div>
+      </>
     );
   }
 };
